@@ -1,5 +1,9 @@
 @import "mixins.scss";
 
+$color: grey;
+$color-white: white;
+
+
 * {
   @include boxSizing(border-box);
   min-height: 0;
@@ -248,20 +252,31 @@ a {
 .radioBtn{
   border-bottom: 1px solid black;
 }
-
-
-
-
-
-
+.line-description{
+  display: none;
+  min-width: 10em;
+}
 
 @media screen and (max-width: 800px) {
   .rr{
     flex-direction: column;
+    border-bottom: 1px dashed grey;
   }
 
   .side-column{
-    display:none;;
+    display:none;
+
+  }
+  .line-description{
+    display: inline-block;
+    font-weight: bold;
+    margin: 0 1em;
+  }
+  .r-line{
+    justify-content: flex-start;
+  }
+  .r-line:nth-child(1){
+    display: none;
   }
 }
 
