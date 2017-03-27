@@ -4,6 +4,8 @@
     <title>Search Form</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="payment.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
 </head>
 <body>
@@ -17,6 +19,119 @@
     </ul>
 
 </nav>
+
+
+<div id="frame">
+
+    <div id="content">
+
+
+
+        <div class="lbl" id="lbl-trip-details">
+            <h3>Trip payment details</h3>
+            <div>Copenhagen to Madrid</div>
+            <div>Round trip</div>
+            <div>From: 22.08.17 - 29.08.17</div>
+            <div>1 adult</div>
+            <div>Total cost: 650.00 DKK</div>
+
+
+
+
+        </div>
+
+
+        <div class="lbl" id="add-price-breakdown">
+            <h3>Price breakdown</h3>
+            <div>Copenhagen to Madrid</div>
+            <div>Tue 28th Mar 10:50 - 14:40 FR 4048 </div>
+            <div>1 x Adult fare </div>
+            <div>Dkr 779.00</div>
+            <div>Madrid to Copenhagen</div>
+            <div>Wed 5th Apr 06:45 - 10:25 FR 4047</div>
+            <div>1 x Adult fare</div>
+            <div>Dkr 289.00</div>
+            <div>Total cost: 650.00 DKK</div>
+        </div>
+
+
+        <div class="lbl" id="lbl-card_details">
+            <h3>Card details</h3>
+            <div>
+                <label> Card number: </label>
+                <input placeholder="Enter card number" type="text" size="20" name="cardnumber">
+            </div>
+
+            <div>
+                <label>Card type: </label>
+                <select>
+                    <option selected="selected" disabled="disabled">Please select</option>
+
+                    <option>Visa</option>
+                    <option>Visa Electron</option>
+                    <option>Visa Delta</option>
+                    <option>American Express</option>
+                    <option>Master card</option>
+                    <option>Master card Debit</option>
+                    <option>Master card Prepaid</option>
+                </select>
+            </div>
+
+
+
+            <div>
+                <label>Expiry: </label>
+                <select>
+                    <option selected="selected" disabled="disabled">Month</option>
+                    <option>January</option>
+                    <option>February</option>
+                    <option>March</option>
+                    <option>April</option>
+                    <option>May</option>
+                    <option>June</option>
+                    <option>July</option>
+                    <option>August</option>
+                    <option>September</option>
+                    <option>October</option>
+                    <option>November</option>
+                    <option>December</option>
+                </select>
+
+                <select>
+                    <option selected="selected" disabled="disabled">Year</option>
+
+                    <option>2020</option>
+                    <option>2019</option>
+                    <option>2018</option>
+                    <option>2017</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Security code</label>
+                <input placeholder="CVV" type="year" name="CVV">
+            </div>
+
+            <div>
+                <label> Cardholder name: </label>
+                <input placeholder="ex. John Smith" type="text" name="cardholder">
+            </div>
+
+        </div>
+        <div class="lbl" id="lbl_checkout">
+            <h3>Checkout</h3>
+
+            <div>
+                <input type="checkbox" name="vehicle1" value="Bike"> By clicking Pay Now, I confirm I have read and accept General Ts and Cs of carriage, Website Terms and Privacy statement
+            </div>
+            <button>Pay NOW</button>
+        </div>
+
+    </div>
+</div>
+
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>
 
