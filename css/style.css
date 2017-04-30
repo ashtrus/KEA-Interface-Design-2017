@@ -11,14 +11,14 @@ body {
   margin: 0; }
 
 a {
-  color: #fff;
+  color: #000;
   letter-spacing: 2px;
   text-decoration: none;
   padding: 20px 5px;
   display: block;
   text-align: center; }
   a:hover {
-    background: rgba(0, 0, 0, 0.3); }
+    background: rgba(118, 147, 126, 0.8); }
 
 .cover {
   height: 100vh;
@@ -57,14 +57,14 @@ a {
 .flex-nav ul {
   list-style: none;
   display: flex;
-  background: grey;
+  background: #938585;
   margin: 0;
   padding: 0; }
 .flex-nav li {
   flex: 1; }
 .flex-nav li a.active {
   background-color: white;
-  color: green; }
+  color: #76937E; }
 .flex-nav li a:hover:not(.active) {
   background-color: #555;
   color: white; }
@@ -144,7 +144,7 @@ a {
     width: 100%; } }
 .column-layout {
   max-width: 1300px;
-  background-color: #fff;
+  background-color: white;
   margin: 40px auto 0 auto;
   line-height: 1.65;
   padding: 20px 50px;
@@ -153,12 +153,12 @@ a {
 .main-column {
   flex: 3;
   order: 2;
-  background-color: aqua; }
+  background-color: #E0E0E0; }
 
 .side-column {
   flex: 1;
   order: 1;
-  background-color: blueviolet;
+  background-color: #76937E;
   margin: 1px; }
 
 .line {
@@ -181,7 +181,7 @@ a {
   justify-content: center; }
 
 .rr:nth-child(4n), .rr:nth-child(4n-1) {
-  background: red; }
+  background: #938585; }
 
 .radioBtn {
   border-bottom: 1px solid black; }

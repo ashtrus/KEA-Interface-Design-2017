@@ -1,7 +1,9 @@
 @import "mixins.scss";
 
-$color: grey;
+$color: #E0E0E0;
 $color-white: white;
+$color-green: #76937E;
+$color-darkGrey: #938585;
 
 
 * {
@@ -19,14 +21,14 @@ body {
 }
 
 a {
-  color: #fff;
+  color: #000;
   letter-spacing: 2px;
   text-decoration: none;
   padding: 20px 5px;
   display: block;
   text-align: center;
   &:hover {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(118,147,126, 0.8);
   }
 }
 
@@ -79,7 +81,7 @@ a {
   ul {
     list-style: none;
     display: flex;
-    background: grey;
+    background: $color-darkGrey;
     margin: 0;
     padding: 0;
   }
@@ -89,7 +91,7 @@ a {
 
   li a.active {
     background-color: white;
-    color: green;
+    color: $color-green;
   }
   li a:hover:not(.active) {
     background-color: #555;
@@ -190,7 +192,7 @@ a {
 //*************************Css for index HTML RESULTS ***************//
 .column-layout {
   max-width: 1300px;
-  background-color: #fff;
+  background-color: $color-white;
   margin: 40px auto 0 auto;
   line-height: 1.65;
   padding: 20px 50px;
@@ -202,14 +204,14 @@ a {
   //display: flex;
   flex:3;
   order:2;
-  background-color: aqua;
+  background-color: $color;
 
 }
 
 .side-column {
   flex: 1;
   order:1;
-  background-color: blueviolet;
+  background-color: $color-green;
   margin: 1px;
 }
 
@@ -247,7 +249,7 @@ a {
   justify-content: center;
 }
 .rr:nth-child(4n), .rr:nth-child(4n-1) {
-  background: red;
+  background: $color-darkGrey;
 }
 .radioBtn{
   border-bottom: 1px solid black;
