@@ -16,3 +16,7 @@
         $('.login').hide();
         $('.register').show();
     })
+
+    $('.delete').on('click', function() {
+         $('.modal').hide();
+    })
