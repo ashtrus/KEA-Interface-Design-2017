@@ -3,7 +3,11 @@
 <head>
     <title>Search Form</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.css">
+   
+    
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login-reg.css">
 
 </head>
 <body>
@@ -14,6 +18,7 @@
         <li class="nav-item"><a class="active" href="index.html">Search</a></li>
         <li class="nav-item"><a href="results.html">Results</a></li>
         <li class="nav-item"><a href="payment.html">Payment</a></li>
+    
     </ul>
 
 </nav>
@@ -35,9 +40,8 @@
     </form>
 </div>
 
-<div class="inroduction">
-    <h1>Your Favourite Destinations</h1>
-</div>
+<div class="inroduction"><h1>Your Favourite Destinations</h1></div>
+
 <div id="card-favourite-wrapper">
 
 
@@ -53,8 +57,43 @@
 
 </div>
 
+<!--loginreg popup on load--> 
+<div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Login/ Register</p>
+
+      <button class="delete"></button>
+    </header>
+    <section class="modal-card-body">
+      <!-- Content ... -->
+      <h3> Please login to access our flight engine service</h3>
+
+      <div class="login">
+          
+            <input id="username" type="text" placeholder="Enter your username">  </input>
+            
+        <input id="password" type="text" placeholder="Enter your password">  </input>
+        </div>
+        <div class="register"> 
+            <input id="firstname" type="text" placeholder="Enter your firstname">  </input>
+            <input id="lastname" type="text" placeholder="Enter your lastname">  </input>
+             <input id="username" type="text" placeholder="Enter your username">  </input>
+             <input id="password" type="text" placeholder="Enter your password">  </input>
+              <input id="password" type="text" placeholder="Enter your email">  </input>
+        </div>
+
+    </section>
+    <footer class="modal-card-foot">
+      <a class="button is-success" id="savebtn">Login</a>
+      <a class="button" id="signUpbtn">Sign Up</a>
+    </footer>
+  </div>
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="js/login-reg.js"> </script>
 <script>
 
     $(function () {
@@ -62,6 +101,8 @@
             $('.flex-nav ul').toggleClass('open');
         });
     });
+
+
 
 </script>
 </body>
