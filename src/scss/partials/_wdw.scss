@@ -1,0 +1,61 @@
+.wdw {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  #searchForm {}
+}
+
+#wdw-search {
+  display: flex;
+}
+
+#wdw-login {
+  display: flex;
+}
+
+#wdw-signup {
+  display: flex;
+}
+
+#wdw-user-profile {
+  display: flex;
+}
+
+#wdw-search-results {
+  display: flex;
+  &>div{
+    // flex-basis: calc(25% - 14px);
+    // justify-content: center;
+    // flex-direction: column; 
+    &.destination{
+      flex-direction: column;
+      h1 {
+      align-items: flex-start!important;
+        // margin-top: 0px;
+        // flex-basis: calc(100% - 22px);  
+        // justify-content: center;
+      }
+    }
+    .flight-details{
+      flex-direction: row;
+      .departureTime{
+      }
+      .description{
+      }
+      .arrivalTime{
+      }
+      .price{
+      }
+    }
+  }
+
+
+}
+
+#wdw-payment {
+  display: flex;
+}
+

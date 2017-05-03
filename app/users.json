@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "profile": {
+            "name": "John",
+            "email": "a",
+            "password": "1",
+            "phone": 10101010,
+            "address": "Tingvej 34 2300 K\u00f8benhavn",
+            "companyName": "Ding Dong APS"
+        }
+    },
+    {
+        "id": 2,
+        "profile": {
+            "name": "Bob",
+            "email": "b",
+            "password": "2",
+            "phone": 10101010,
+            "address": "Amagerbrogade 58, 2300 K\u00f8benhavn S",
+            "companyName": "Food store APS"
+        }
+    }
+]

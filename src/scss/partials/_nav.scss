@@ -1,0 +1,36 @@
+.nav {
+  // ul {
+  //   list-style: none;
+  //   display: flex;
+  //   background: $darkGreyColor;
+  //   margin: 0;
+  //   padding: 0;
+  //   li {
+  //     flex: 1;
+  //     & .active {
+  //       background-color: $secondaryColor;
+  //     }
+  //     a {
+  //     }
+  //   }
+  // }
+  #btnToggleNav{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 0;
+  }
+  #loginNav {
+    position: fixed;
+    top: 7px;
+    right: 40px;
+    text-align: right;
+    li {
+      display: inline;
+      padding-right: 25px;
+    }
+  }
+  & > a:hover {
+    background-color: transparent;
+  }
+}
