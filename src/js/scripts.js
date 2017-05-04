@@ -1,3 +1,15 @@
+/*
+Missing!!!!!! 
+- Arrows to go back and forward 
+- Register function (Implemented but bugging jquery .val())
+- Search  result data from flights to packages (Implementing but bugging  jquery) 
+- add my passenger details after 
+- choosing a flight
+- pay the booking (implemented - but bugging jquery)  
+- confirmation for the reservation of my tickets (display modal popup)
+ 
+
+*/
 (function ($, window, document, undefined) {
 
   'use strict';
@@ -7,25 +19,25 @@
 
   var USERS = [
     {
-      "id": 1,
-      "profile": {
-        "name": "John",
-        "email": "a",
-        "password": "1",
-        "phone": 10101010,
-        "address": "Tingvej 34 2300 K\u00f8benhavn",
-        "companyName": "Ding Dong APS"
+      'id': 1,
+      'profile': {
+        'name': 'John',
+        'email': 'a',
+        'passwor': '1',
+        'phone': 10101010,
+        'address': 'Tingvej 34 2300 K\u00f8benhavn',
+        'companyName': 'Ding Dong APS'
       }
     },
     {
-      "id": 2,
-      "profile": {
-        "name": "Bob",
-        "email": "b",
-        "password": "2",
-        "phone": 10101010,
-        "address": "Amagerbrogade 58, 2300 K\u00f8benhavn S",
-        "companyName": "Food store APS"
+      'id': 2,
+      'profile': {
+        'name': 'Bob',
+        'email': 'b',
+        'password': '2',
+        'phone': 10101010,
+        'address': 'Amagerbrogade 58, 2300 K\u00f8benhavn S',
+        'companyName': 'Food store APS'
       }
     }
   ];
@@ -48,6 +60,11 @@
     hideWindowsAndShowOneWindow('wdw-search');
   });
 
+  $('#btnPaymentMenu').click(function() {
+    hideWindowsAndShowOneWindow('wdw-payment');
+    console.log('paymentclikcnav');
+  });
+
   function loggedInMenu() {
     $('#btnLoginMenu').hide();
     $('#btnLogoutMenu').show();
@@ -62,11 +79,7 @@
     $('#btnRegisterMenu').show();
   }
 
-  // Start function
-  $(function () {
-    $('nav ul').hide();
-    isLoggedIn();
-  });
+ 
 
 
   /**********************************************************************/
@@ -80,7 +93,6 @@
       oUsers = JSON.parse(localStorage.Users);
       oUser = JSON.parse(localStorage.loggedInUser);
       loggedInMenu();
-      // hideWindowsAndShowOneWindow('wdw-user-profile');
       hideWindowsAndShowOneWindow('wdw-search-results');
       userDetails(oUser);
     } else {
@@ -129,7 +141,7 @@
         localStorage.loggedInUser = JSON.stringify(user);
         hideWindowsAndShowOneWindow('wdw-user-profile'); 
         loggedInMenu();
-        userDetails(user);        
+       userDetails(user);        
         return false; // break on found
 
       } else {
@@ -140,7 +152,11 @@
   }
 
   $('#btnLogin').on('click', login);
-
+ // Start function
+  $(function () {
+    $('nav ul').hide();
+    isLoggedIn();
+  });
     
   /**********************************************************************/
   // Logout
@@ -164,43 +180,101 @@
   });
 
   /**********************************************************************/
-  // Sign Up
+  // Profile
   /**********************************************************************/
 
   $('#btnProfileMenu').click(function () {
-    console.log('register click');
+    console.log('profile click');
     hideWindowsAndShowOneWindow('wdw-user-profile');
   });
 
   /**********************************************************************/
   // Search Results
   /**********************************************************************/
-
-  $('#btnSearch').click(function (e) {
-    e.preventDefault();
+  $('#btnSearch').click(function () {
+    // e.preventDefault();
+        hideWindowsAndShowOneWindow('wdw-search-results');
     console.log('search clicked. results: ');
-    hideWindowsAndShowOneWindow('wdw-search-results');
-  });
+
+      });
+  //$destinationTo =  $('#lblFromDestination').val();
+ // $destinationFrom = $('#lblToDestination').val();
+  //console.log($destinationFrom + $destinationTo);
+
+    /*
+     $searchQueryFrom = $('#lblFromDestination').val();
+     $searchQueryTo = $('#lblToDestination').val();
+     $searchQueryDateOut = $('#lbldateout').val();
+     $searchQueryDateIn = $('#lbldate').val();
+     $searchQueryPassenger = $('#lblPassenger').val();
+     //console.log($searchQueryFrom, $searchQueryTo, $searchQueryDateIn, $searchQueryDateOut, $searchQueryPassenger);
+    */
+
 
 
   /**********************************************************************/
-  // Destination Suggests 
-  /**********************************************************************/
-  //this will include destinations like momodno style boxes on click -> full screen 100%widht +height 
+  // Destination 
+  /*********************************************************************
+    $('#btnSearch').on('click', function() {
+      hideWindowsAndShowOneWindow('wdw-destination');
+    });
+
     $('#btnDestinationMenu').click(function () {
     console.log('direct to destination click');
-    hideWindowsAndShowOneWindow('wdw-destinatnion');
-  });
+    hideWindowsAndShowOneWindow('wdw-destination');
+  });*/
   
+
 
   /**********************************************************************/
   // Payment 
-  /**********************************************************************/
+  /*********************************************************************
 
   $('#btnbooktrip').click(function () {
     console.log('direct to payment click');
     hideWindowsAndShowOneWindow('wdw-payment');
   });
 
+
+  $('#btnPaymentMenu').on('click', function () {
+    console.log('direct to payment click');
+    hideWindowsAndShowOneWindow('wdw-payment');
+  });**/
+
+
+  /**********************************************************************/
+  // Register 
+  /**********************************************************************/
+$('#btnregister').on('click', function(e) {
+ e.preventDefault();
+    $sName = $('#lblSignupName').val();
+    $sEmail = $('#lblSignupEmail').val();
+    $sPhone = $('#lblSignupPhone').val();
+    $sPassword = $('#lblSignupPassword').val();
+    console.log($sName);
+});
+
+
+  /**********************************************************************/
+  // Payment
+  /**********************************************************************/
+    $('input.cc-num').payment('formatCardNumber').on('keyup change', function(){
+      var type = $.payment.cardType( $(this).val() );
+      if(type == 'visa'){
+        $(".company").html("VISA");
+        $(".card").attr("data-type", "visa");
+      } else if(type == 'mastercard'){
+        $(".company").html("<div></div><div></div>");
+        $(".card").attr("data-type", "mastercard");
+      }else{
+        $(".card").attr("data-type", "unknown");
+        $(".company").html("CARD");
+      }
+    });
+    $('input.cc-exp').payment('formatCardExpiry');
+    $('input.cc-cvc').payment('formatCardCVC');
+    $(".button.flip").click(function(){
+      $(".card").toggleClass("flip");
+    });
 
 })(jQuery, window, document);

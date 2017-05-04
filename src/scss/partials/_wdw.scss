@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   display: none;
+  background-image: url('https://s-media-cache-ak0.pinimg.com/originals/31/85/28/318528c085628963a57f605d99b85a54.jpg');
   #searchForm {}
 }
 
@@ -59,11 +60,17 @@
   display: flex;
 }
 
+#wdw-destination{
+  display: flex;
+  z-index: 400;
+}
+
 
 .destination  h1 {
     text-decoration: underline;
 }
 
 #flighttracker h1 {
-  font-family: cursive;
+  font-family: monospace;
+  font-size:1,4vh
 }

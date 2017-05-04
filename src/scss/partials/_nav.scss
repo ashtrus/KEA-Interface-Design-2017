@@ -28,7 +28,7 @@
     font-family: monospace;
     padding-right: 40px;
     font-size: 1.1em;
-    color: black;
+    color: white;
     li {
       display: inline;
       padding-right: 25px;
@@ -38,9 +38,14 @@
     background-color: transparent;
   }
 }
+.fa {
+  color:white;
+
+}
 
 
-
-#flight-tracker p {
-font-family: 'Times New Roman', Times, serif !important;
+#flighttracker h1 {
+color:white;
+font-family: monospace;
+margin-left: 100px;
 }

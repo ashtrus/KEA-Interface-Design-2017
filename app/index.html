@@ -16,11 +16,10 @@
     <script src="assets/components/modernizr/modernizr.min.js"></script>
   </head>
   <body>
-
     <header class="header" role="banner">
       <div class="logo">
         <a href="/">
-          <img src="assets/img/logo2.png" >
+          <img src="assets/img/map.png" >
         </a>
       </div>
       <nav class="nav" role="navigation">
@@ -35,39 +34,32 @@
           <li id="btnProfileMenu"><i class="fa fa-user" aria-hidden="true"></i></li>
           <li id="btnHomeMenu"><i class="fa fa-home" aria-hidden="true"></i></li>
         </ul>
-        <!--<ul>
-          <li><a href="index.html" class="active">Search</a></li>
-          <li><a href="results.html">Results</a></li>
-          <li><a href="payment.html">Payment</a></li>
-        </ul>-->
       </nav>
     </header>
 
- 
-
-
-
+ <div id="imgfront"></div>
     <div class="wdw" id="wdw-search">
       <form id="searchForm">
         <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter">
-    <label for="subscribeNews">One way ticket </label>
-        <input type="text" placeholder="From">
-        <input type="text" placeholder="To">
+        <label for="subscribeNews">One way ticket </label>
+        <input type="text" id="lblFromDestination" name="lblFromDestination" placeholder="From">
+        <input type="text" id="lblToDestination" name="lblToDestination" placeholder="To">
 
-        <label for="from">Fly out</label>
-        <input type="date" name="arrivalDate">
+        <label for="from">Departure</label>
+        <input type="date" id="lbldateout" name="lbldateout">
 
-        <label for="from">Fly back</label>
-        <input type="date" name="departureDate">
+        <label for="from">Arrival</label>
+        <input type="date" name="lblDate" id="lblDate">
 
         <label for="people"><i class="fa fa-users" aria-hidden="true"></i></label>
-        <input type="number" min="1" max="10" value="1" name="passengers">
+        <input type="number" min="1" max="10" value="1" id="lblPassenger" name="passengers">
 
         <button type="submit" id="btnSearch">Search</button>
       </form>
+      
     </div>
 
-
+   <!--login-->
     <div class="wdw" id="wdw-login">
       <form id="form-login">
         <input id="lblAdminEmail" type="text" class="form-control" name="email" placeholder="Email (a)">
@@ -76,25 +68,122 @@
       </form>
     </div>
 
-
+<!--signup-->
     <div class="wdw" id="wdw-signup">
       <form action="" id="form-signup">
-        <input id="lblSignupName" type="text" class="form-control" name="name" placeholder="Name">
-        <input id="lblSignupEmail" type="text" class="form-control" name="email" placeholder="Email">
-        <input id="lblSignupPhone" type="number" class="form-control" name="phone" placeholder="Phone">
-        <input id="lblSignupPassword" type="password" class="form-control" name="password" placeholder="Password">
-        <button class="btn btn-default">Register</button>
+        <input id="lblSignupName" type="text" class="form-control" name="lblSignupName" placeholder="Name">
+        <input id="lblSignupEmail" type="text" class="form-control" name="lblSignupEmail" placeholder="Email">
+        <input id="lblSignupPhone" type="number" class="form-control" name="lblSignupPhone" placeholder="Phone">
+        <input id="lblSignupPassword" type="password" class="form-control" name="lblSignupPassword" placeholder="Password">
+        <button class="btn btn-default" id="btnregister">Register</button>
       </form>
     </div>
 
+
+
+<!--user profile-->
     <div class="wdw" id="wdw-user-profile">
       <p>User profile Page</p>
     </div>
 
+
+
+ <!--payment-->
+ <div class="wdw" id="wdw-payment">
+    <div class="checkout">
+  <h1>Checkout</h1>
+  <p>You are about to buy:</p>
+  <p><img class="item" title="Image of Cover" src="#" />Destination, price, </p>
+  <p>You don't have a card saved with us, so you'll need to add one now</p>
+  <div class="card">
+    <div class="front side">
+      <span class="company">
+        CARD
+      </span>
+      PAYMENT CARD
+      <input type="text" placeholder="Card number" class="cc-num" />
+      <div>
+        Expires:
+        <input type="text" placeholder="MM/YY" class="cc-exp" />
+      </div>
+    </div>
+    <div class="back side">
+      <div class="stripe"></div>
+      <div class="signature">
+        <span class="right">
+        CVC: <input type="text" placeholder="000" class="cc-cvc" maxlength="4" />
+        </span>
+        <span class="sig">
+          our lovely customer
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="button flip">
+    Flip over
+  </div>
+  <p>Now, where to send it?</p>
+   <div class="addr">
+   <input type="text" placeholder="Address Line 1" />
+    <input type="text" placeholder="Address Line 2" />
+    <input type="text" placeholder="Town" />
+    <input type="text" placeholder="Postcode" />
+    <input type="text" placeholder="Country" />
+   </div>
+   <div class="button">
+    Continue
+  </div>
+</div>
+      </div>
+
+
+
+<!-- Destination --> 
+     <div class="wdw" id="wdw-destination">
+     
+<figure class="snip1560">
+  <img src="http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1485554509/HAWAIITRAVEL0117.jpg?itok=AO1W5aQF" alt="pr-sample23" style='width=100%' />
+  <figcaption>
+    <h4>Hawaii</h4>
+    <h2>United <span>States</span></h2>
+    <h3>Order now</h3>
+  </figcaption>
+  <a href="#" class="link"></a>
+</figure>
+
+<figure class="snip1560"><img src="http://static.atimes.com/uploads/2015/12/Dubai-cityscape.jpg" alt="pr-sample25" />
+  <figcaption>
+    <h4>Dubai</h4>
+    <h2>Capital <span>Young</span></h2>
+ <h3>Order now</h3>
+  </figcaption>
+  <a href="#" class="link"></a>
+</figure>
+
+<figure class="snip1560"><img src="http://static.atimes.com/uploads/2015/12/Dubai-cityscape.jpg" alt="pr-sample25" />
+  <figcaption>
+    <h4>Dubai</h4>
+    <h2>Capital <span>Young</span></h2>
+ <h3>Order now</h3>
+  </figcaption>
+  <a href="#" class="link"></a>
+</figure>
+<figure class="snip1560">
+  <img src="http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1485554509/HAWAIITRAVEL0117.jpg?itok=AO1W5aQF" alt="pr-sample23" />
+  <figcaption>
+    <h4>Hawaii</h4>
+    <h2>United <span>States</span></h2>
+    <h3>Order now</h3>
+  </figcaption>
+  <a href="#" class="link"></a>
+</figure>
+    </div>
+
+
+<!--searhc results-->
     <div class="wdw" id="wdw-search-results">
       <div class="destination">
-        
-        <h1>Copenhagen - Rome</h1>
+        <h1><div id="lbldestinationfrom"> </div>Copenhagen - Rome<div id="lbldestinationto"> </div</h1>
         </br></br>
 
 <div class="snip1265">
@@ -139,7 +228,6 @@
       <h4 class="plan-title">
         Gold Package 
       </h4>
-      
     </header>
     <ul class="plan-features">
        <div class="flight-details">
@@ -172,27 +260,18 @@
   
 
       </div>
-
-<!--
+</div>
+    <!--
       <div class="flight-details">
         <div class="departureTime">9:00</div>
         <div class="description">2 hours Norwegian</div>
         <div class="arrivalTime">11:00</div>
         <div class="price">100€</div>
       </div>-->
-    </div>
+    
 
-    <div class="wdw" id="wdw-payment">
-      <p>Flight Payment Page</p>
-    </div>
-
-     <div class="wdw" id="wdw-destination">
-      <p>Destination Page</p>
-    </div>
-
-    <footer class="footer" role="contentinfo">
-
-    </footer>
+   
+    <footer class="footer" role="contentinfo">    </footer>
 
     <script src="assets/components/jquery/jquery.min.js"></script>
     <script src="assets/js/scripts.min.js"></script>

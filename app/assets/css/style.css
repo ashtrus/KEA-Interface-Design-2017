@@ -1,6 +1,10 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:300|Roboto|Allura);
 @import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:800);
+@import url(https://fonts.googleapis.com/css?family=Open+sans:700);
+@import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
 .clear:before, .clear:after {
   content: ' ';
   display: table; }
@@ -408,7 +412,7 @@ textarea {
   position: fixed;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.4);
-  height: 97px; }
+  height: 87px; }
 
 .logo {
   margin: -58px 0 0 -100px;
@@ -430,7 +434,7 @@ textarea {
   font-family: monospace;
   padding-right: 40px;
   font-size: 1.1em;
-  color: black; }
+  color: white; }
   .nav #loginNav li {
     display: inline;
     padding-right: 25px; }
@@ -438,8 +442,13 @@ textarea {
 .nav > a:hover {
   background-color: transparent; }
 
-#flight-tracker p {
-  font-family: 'Times New Roman', Times, serif !important; }
+.fa {
+  color: white; }
+
+#flighttracker h1 {
+  color: white;
+  font-family: monospace;
+  margin-left: 100px; }
 
 .wdw {
   width: 100vw;
@@ -450,7 +459,8 @@ textarea {
       align-items: center;
   -ms-flex-pack: center;
       justify-content: center;
-  display: none; }
+  display: none;
+  background-image: url("https://s-media-cache-ak0.pinimg.com/originals/31/85/28/318528c085628963a57f605d99b85a54.jpg"); }
 
 #wdw-search {
   display: -ms-flexbox;
@@ -485,11 +495,17 @@ textarea {
   display: -ms-flexbox;
   display: flex; }
 
+#wdw-destination {
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 400; }
+
 .destination h1 {
   text-decoration: underline; }
 
 #flighttracker h1 {
-  font-family: cursive; }
+  font-family: monospace;
+  font-size: 1,4vh; }
 
 @font-face {
   font-family: 'Font-Name';
@@ -567,6 +583,166 @@ textarea {
   h2,
   h3 {
     page-break-after: avoid; } }
+
+.checkout {
+  color: white; }
+
+#btnregister {
+  background-color: #fb8c00;
+  border-radius: 20px; }
+
+#btnLogin {
+  background-color: #fb8c00;
+  border-radius: 20px; }
+
+#imgfront > img {
+  width: 500px;
+  height: 500px;
+  margin-top: 400px;
+  margin-left: 200px;
+  background-color: white;
+  -ms-flex-pack: center;
+      justify-content: center; }
+
+input {
+  font-family: "Roboto";
+  font-size: 1em; }
+
+h1, .credit {
+  font-family: "Roboto Slab"; }
+
+.credit {
+  text-align: center;
+  font-size: 0.7em;
+  padding: 10px; }
+
+.item {
+  width: 60px;
+  vertical-align: middle;
+  margin-right: 15px; }
+
+.card .company {
+  box-sizing: border-box;
+  float: right; }
+
+.card {
+  position: relative;
+  perspective: 600px; }
+
+.card, .card .side {
+  width: 350px;
+  height: 200px; }
+
+.card .side {
+  border-radius: 5px 5px;
+  transition: all 0.4s linear;
+  background: #333;
+  color: #FFF;
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.card .front {
+  padding: 10px;
+  transform: rotateX(0deg) rotateY(0deg); }
+
+.card.flip .front {
+  transform: rotateY(180deg); }
+
+.card .cc-num {
+  width: 100%;
+  padding-top: 100px; }
+
+.card input {
+  outline: none;
+  border: 0px solid;
+  background: none;
+  color: #FFF; }
+
+.card[data-type="visa"] input::-webkit-input-placeholder, .card[data-type="mastercard"] input::-webkit-input-placeholder {
+  color: #DDD; }
+
+.card[data-type="visa"] input::-moz-placeholder, .card[data-type="mastercard"] input::-moz-placeholder {
+  color: #DDD; }
+
+.card[data-type="visa"] input:-ms-placeholder, .card[data-type="mastercard"] input:-ms-placeholder {
+  color: #DDD; }
+
+.card[data-type="visa"] .company {
+  color: rgba(255, 255, 255, 0.9);
+  font-style: italic;
+  text-shadow: 0px 0px 3px rgba(17, 123, 173, 0.9); }
+
+.card[data-type="visa"] .side {
+  background: #1db1cf; }
+
+.card[data-type="mastercard"] .side {
+  background: #4d86ce; }
+
+.card[data-type="mastercard"] .company div {
+  float: left;
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  background: rgba(239, 209, 57, 0.8); }
+
+.card[data-type="mastercard"] .company div:first-child {
+  background: rgba(223, 40, 40, 0.8);
+  margin-right: -5px; }
+
+.signature {
+  background: #DDD;
+  color: #000;
+  padding: 10px; }
+
+.right {
+  float: right; }
+
+.sig {
+  font-family: "Allura"; }
+
+.signature input.cc-cvc {
+  color: #000;
+  width: 40px; }
+
+.stripe {
+  margin: 20px 0;
+  height: 40px;
+  background: #000; }
+
+.card .back {
+  padding-top: 15px;
+  transform: rotateY(-180deg); }
+
+.card.flip .back {
+  transform: rotateX(0deg) rotateY(0deg); }
+
+.button {
+  background: #0099CC;
+  padding: 4px;
+  color: #FFF;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px 5px; }
+
+.button:hover {
+  background: #33B5E5; }
+
+.checkout {
+  margin: 0 auto;
+  width: 350px; }
+
+.addr input {
+  width: 100%;
+  outline: none;
+  border: 0px solid;
+  padding: 5px; }
 
 .snip1265 {
   font-family: 'Raleway', Arial, sans-serif;
@@ -708,3 +884,92 @@ body {
 
 .snip1265 * {
   font-size: large !important; }
+
+.snip1560 {
+  font-family: 'Open Sans', Arial, sans-serif;
+  display: inline-block;
+  margin: 8px;
+  min-width: 230px;
+  max-width: 315px;
+  width: 100%;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: none !important;
+  position: relative;
+  padding: 10px;
+  border: 2px solid #e8b563;
+  box-sizing: border-box; }
+
+.snip1560:before {
+  content: '';
+  background-color: #000000;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  z-index: -1; }
+
+.snip1560 * {
+  transition: all 0.35s ease; }
+
+.snip1560 img {
+  max-width: 100%;
+  vertical-align: top;
+  background-image: linear-gradient(#000000, #ffffff); }
+
+.snip1560 figcaption,
+.snip1560 .link {
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  left: 20px;
+  right: 20px; }
+
+.snip1560 h2,
+.snip1560 h3,
+.snip1560 h4 {
+  margin: 0px;
+  position: absolute;
+  width: 100%;
+  text-transform: uppercase; }
+
+.snip1560 h2 {
+  top: 50%;
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+  font-size: 2em;
+  font-family: 'Playfair Display', Arial, sans-serif; }
+
+.snip1560 h2 span {
+  color: #e8b563; }
+
+.snip1560 h3 {
+  font-size: 1.3em;
+  bottom: 0;
+  font-weight: 700;
+  letter-spacing: 2px; }
+
+.snip1560 h4 {
+  top: 0;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  font-weight: 400;
+  opacity: 0.9;
+  font-family: 'Playfair Display', Arial, sans-serif; }
+
+.snip1560:hover img,
+.snip1560.hover img {
+  opacity: 0.35; }
+
+#wdw-payment {
+  font-size: 1,8vh !important;
+  font-family: monospace; }
+
+.btnpay {
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.4); }
+
+* > input {
+  border-radius: 11px; }
