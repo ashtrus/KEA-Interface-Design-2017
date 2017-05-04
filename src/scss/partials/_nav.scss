@@ -25,6 +25,10 @@
     top: 7px;
     right: 40px;
     text-align: right;
+    font-family: monospace;
+    padding-right: 40px;
+    font-size: 1.1em;
+    color: black;
     li {
       display: inline;
       padding-right: 25px;
@@ -33,4 +37,10 @@
   & > a:hover {
     background-color: transparent;
   }
+}
+
+
+
+#flight-tracker p {
+font-family: 'Times New Roman', Times, serif !important;
 }

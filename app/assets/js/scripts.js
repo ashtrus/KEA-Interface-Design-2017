@@ -195,11 +195,11 @@
   // Destination Suggests 
   /**********************************************************************/
   //this will include destinations like momodno style boxes on click -> full screen 100%widht +height 
-  
-  $('#btndestination').click(function () {
+    $('#btnDestinationMenu').click(function () {
     console.log('direct to destination click');
-    hideWindowsAndShowOneWindow('wdw-destination');
+    hideWindowsAndShowOneWindow('wdw-destinatnion');
   });
+  
 
   /**********************************************************************/
   // Payment 

@@ -415,8 +415,6 @@ textarea {
   position: absolute;
   top: 50%;
   left: 50%; }
-  .logo img {
-    background-image: url("https://image.flaticon.com/icons/svg/265/265725.svg"); }
 
 .nav #btnToggleNav {
   position: fixed;
@@ -428,13 +426,20 @@ textarea {
   position: fixed;
   top: 7px;
   right: 40px;
-  text-align: right; }
+  text-align: right;
+  font-family: monospace;
+  padding-right: 40px;
+  font-size: 1.1em;
+  color: black; }
   .nav #loginNav li {
     display: inline;
     padding-right: 25px; }
 
 .nav > a:hover {
   background-color: transparent; }
+
+#flight-tracker p {
+  font-family: 'Times New Roman', Times, serif !important; }
 
 .wdw {
   width: 100vw;
@@ -513,7 +518,10 @@ textarea {
 
 #searchForm {
   border-radius: 15px;
-  padding: 10px; }
+  padding: 28px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+  font-family: monospace; }
 
 @media print {
   * {
