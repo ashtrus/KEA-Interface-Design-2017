@@ -485,6 +485,12 @@ textarea {
   display: -ms-flexbox;
   display: flex; }
 
+.destination h1 {
+  text-decoration: underline; }
+
+#flighttracker h1 {
+  font-family: cursive; }
+
 @font-face {
   font-family: 'Font-Name';
   src: url("../fonts/font-name.eot");
